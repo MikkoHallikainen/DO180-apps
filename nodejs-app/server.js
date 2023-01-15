@@ -1,9 +1,11 @@
-import process from 'node:process';
 var createError = require('html-errors');
 
 var express = require('express');
 app = express();
 
+
+console.log("DEBUG");
+console.log(process.env);
 app.get('/', function (req, res) {
   res.send('Hello World from pod: ' + process.env.HOSTNAME + '\n')
 });
